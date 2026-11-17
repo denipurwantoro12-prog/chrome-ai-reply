@@ -1,0 +1,28 @@
+/* Styling tambahan untuk tombol AI Reply & Scrollbar Modal */
+.ai-reply-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed !important;
+}
+
+.ai-quick-badge:hover {
+  border-color: #1d9bf0 !important;
+  background-color: #1e2d3d !important;
+}
+
+.ai-reply-modal-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ai-reply-modal-box::-webkit-scrollbar-track {
+  background: #15202b;
+  border-radius: 8px;
+}
+
+.ai-reply-modal-box::-webkit-scrollbar-thumb {
+  background: #38444d;
+  border-radius: 8px;
+}
+
+.ai-reply-modal-box::-webkit-scrollbar-thumb:hover {
+  background: #1d9bf0;
+}

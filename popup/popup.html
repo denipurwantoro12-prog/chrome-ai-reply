@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      padding: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #15202b;
+      color: #ffffff;
+    }
+    h3 {
+      margin: 0 0 8px 0;
+      color: #1d9bf0;
+      font-size: 16px;
+    }
+    label {
+      font-size: 12px;
+      color: #8899a6;
+      display: block;
+      margin-top: 10px;
+    }
+    input, button, select, textarea {
+      width: 100%;
+      margin-top: 5px;
+      padding: 7px 8px;
+      box-sizing: border-box;
+      background: #192734;
+      color: #ffffff;
+      border: 1px solid #38444d;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #1d9bf0;
+    }
+    button {
+      background: #1d9bf0;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 9999px;
+      padding: 9px;
+      margin-top: 14px;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background: #1a8cd8;
+    }
+    #status {
+      color: #00ba7c;
+      font-size: 12px;
+      text-align: center;
+      margin: 8px 0 0 0;
+      min-height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Pengaturan AI Reply</h3>
+  
+  <label for="apiKey">Gemini API Key:</label>
+  <input type="password" id="apiKey" placeholder="Masukkan API Key" />
+
+  <label for="model">Model Gemini:</label>
+  <select id="model">
+    <option value="models/gemini-2.5-flash">Gemini 2.5 Flash</option>
+    <option value="models/gemini-2.5-pro">Gemini 2.5 Pro</option>
+    <option value="models/gemini-3.6-flash">Gemini 3.6 Flash</option>
+    <option value="models/gemini-3.5-flash">Gemini 3.5 Flash</option>
+    <option value="models/gemini-3.5-flash-lite">Gemini 3.5 Flash Lite</option>
+    <option value="models/gemini-2.0-flash">Gemini 2.0 Flash</option>
+  </select>
+  
+  <label for="language">Bahasa Balasan:</label>
+  <select id="language">
+    <option value="Auto">🌐 Otomatis (Ikuti Bahasa Postingan)</option>
+    <option value="Indonesian">🇮🇩 Indonesia</option>
+    <option value="English">🇬🇧 English (X/Twitter Vibe)</option>
+    <option value="Japanese">🇯🇵 Japanese (日本語)</option>
+    <option value="Korean">🇰🇷 Korean (한국어)</option>
+    <option value="Spanish">🇪🇸 Spanish (Español)</option>
+  </select>
+
+  <label for="userAddresses">Daftar Wallet / ID Anda:</label>
+  <textarea id="userAddresses" rows="6" placeholder="Masukkan daftar wallet/ID..."></textarea>
+
+  <button id="saveBtn">Simpan Pengaturan</button>
+  <p id="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
